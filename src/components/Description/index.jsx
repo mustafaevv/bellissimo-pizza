@@ -13,10 +13,10 @@ const Title = styled.h4`
   margin-bottom: 1em;
 `;
 const Text = styled.p`
-  font-size: 24px;
+  font-size: 18px;
   flex-wrap: 400;
   line-height: 1;
-  max-width: 105vh;
+  max-width: 80vh;
   
 `;
 

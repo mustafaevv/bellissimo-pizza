@@ -6,6 +6,7 @@ import { faPhone, faShoppingCart, faStar } from '@fortawesome/free-solid-svg-ico
 import Container from '../../layout/Container'
 import Logo from '../../images/Svgs/Logo'
 import halal from '../../images/halal.png'
+import { Link } from 'react-router-dom'
 
 
 const Block = styled.header`
@@ -51,15 +52,15 @@ const Tell = styled.p`
   & svg{
     color: rgb(0, 171, 73);
     font-size: 20px;
-    padding-right: 5px;
+    padding-right: 7px;
   }
 
   & span{
     line-height: 0.9;
     font-weight: 400;
     font-size: 14px;
-    max-width: 35vh;
-    padding-left: 5px;
+    max-width: 25vh;
+    padding-left: 7px;
     color: rgb(0, 171, 73);
   }
 `;
@@ -81,7 +82,7 @@ const Button = styled.button`
   color: #fff;
   border: none;
   cursor: pointer;
-
+  text-decoration: none;
   & svg {
     font-size: 14px;
   }
@@ -102,7 +103,7 @@ const Header = () => {
           <Retting> <FontAwesomeIcon icon={faStar}/> 4.7/5 <span>cредняя оценка за неделю</span></Retting>
           <Tell> <FontAwesomeIcon icon={faPhone}/> 1174 <span>бесплатная доставка за 45 минут или пицца в подарок</span> </Tell>
           <HalalImg src={halal} alt="Halal Logo" />
-          <Button> <FontAwesomeIcon icon={faShoppingCart}/> <span>3</span></Button>
+          <Button as={Link} to="cart"> <FontAwesomeIcon icon={faShoppingCart}/> <span>3</span></Button>
         </HeaderContainer>
       </Container>
     </Block>

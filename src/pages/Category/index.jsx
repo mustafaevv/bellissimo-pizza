@@ -18,7 +18,6 @@ const Category = () => {
   const {type} = useParams()
   const [data,setData] = useState(null)
   const {name: title}  = links.find((item) => item.link === pathname);
-  console.log(title);
   useEffect(()=>{
     const fetchData = async ()=>{
       const data = await fetch(`http://localhost:4000/products?category=${type}`)
