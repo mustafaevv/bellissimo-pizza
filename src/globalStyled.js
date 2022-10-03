@@ -8,8 +8,8 @@ const GlobalStyled = createGlobalStyle`
   }
 
   body {
-    background: red;
-    
+    font-family: 'Nunito Sans', sans-serif;
+    background: #f2f2f2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
