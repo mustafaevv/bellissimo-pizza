@@ -1,8 +1,12 @@
 import React from 'react'
+import SaladItem from '../../componentItems/SaladItem'
+import Container from '../../layout/Container'
 
 const Salad = () => {
   return (
-    <div>Salad</div>
+    <Container>
+      <SaladItem/>
+    </Container>
   )
 }
 

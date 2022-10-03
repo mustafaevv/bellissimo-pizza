@@ -1,8 +1,13 @@
 import React from 'react'
 
+import DrinksItem from '../../componentItems/DrinksItem'
+import Container from '../../layout/Container'
+
 const Drinks = () => {
   return (
-    <div>Drinks</div>
+    <Container>
+      <DrinksItem/>
+    </Container>
   )
 }
 

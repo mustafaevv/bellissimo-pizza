@@ -1,10 +1,12 @@
 import React from 'react'
-import Nav from '../../components/Nav'
+import PizzaItem from '../../componentItems/PizzaItem'
+import Container from '../../layout/Container'
 
 const Pizza = () => {
   return (
-    <div>
-    </div>
+    <Container>
+      <PizzaItem/>
+    </Container>
   )
 }
 

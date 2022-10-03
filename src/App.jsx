@@ -19,6 +19,7 @@ const App = () => {
       <BrowserRouter>
         <Header/>
         <Nav/>
+        <Slider/>
         <Routes>
           <Route path="combo" element={<Combo/>}/>
           <Route path="pizza" element={<Pizza/>}/>
@@ -29,7 +30,6 @@ const App = () => {
           <Route path="sauce" element={<Sauce/>}/>
           <Route path="*" element={<Home/>}/>
         </Routes>
-        <Slider/>
       </BrowserRouter>
     </div>
   );

@@ -1,8 +1,11 @@
 import React from 'react'
-
+import SauceItem from '../../componentItems/SauceItem'
+import Container from '../../layout/Container'
 const Sauce = () => {
   return (
-    <div>Sauce</div>
+    <Container>
+      <SauceItem/>
+    </Container>
   )
 }
 
