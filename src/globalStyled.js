@@ -15,8 +15,8 @@ const GlobalStyled = createGlobalStyle`
   }
 
   h1{
-    font-size: 36px;
-    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
   }
 `
 

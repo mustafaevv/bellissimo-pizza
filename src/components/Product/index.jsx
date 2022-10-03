@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import links from '../../router';
-import { useLocation } from 'react-router-dom';
-
 
 const Block = styled.div`
   margin-top: 50px;
@@ -12,6 +9,14 @@ const Block = styled.div`
   max-width: 360px;
   border-radius: 16px;
   padding-bottom: 20px;
+  transition: 0.4s transform;
+  box-shadow: 0 0 10px #fff;
+  display: flex;
+  flex-direction: column;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 `;
 
 const Img = styled.img`
@@ -37,6 +42,7 @@ const Price = styled.p`
   font-size: 24px;
   padding: 0px 16px;
   color: rgb(50, 50, 50);
+  margin-bottom: 20px;
 `;
 const Button = styled.button`
   width: 90%;
@@ -46,9 +52,9 @@ const Button = styled.button`
   margin-left: 15px;
   line-height: 50px;
   border-radius: 16px;
-  margin-top: 20px;
   color: rgb(0, 171, 73);
   font-size: 18px;
+  margin-top: auto;
   cursor: pointer;
 
   & svg{
@@ -57,12 +63,8 @@ const Button = styled.button`
 `;
 
 const Product = ({data}) => {
-  const { pathname } = useLocation();
-  const { title } = links.find(title=> title.link === pathname)
-  console.log(title);
   return (
     <Block>
-      <h4>{title}</h4>
       <Img src={data.image} alt={data.name} />
       <Name>{data.name}</Name>
       <Desc>{data.description}</Desc>

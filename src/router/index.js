@@ -1,31 +1,31 @@
 const links = [
   {
     name: 'Комбо',
-    link: '/combo'
+    link: '/category/combo'
   },
   {
     name: 'Пицца',
-    link: '/pizza'
+    link: '/category/pizza'
   },
   {
     name: 'Закуски',
-    link: '/snack'
+    link: '/category/snack'
   },
   {
     name: 'Напитки',
-    link: '/drinks'
+    link: '/category/drinks'
   },
   {
     name: 'Салаты',
-    link: '/salad'
+    link: '/category/salad'
   },
   {
     name: 'Десерты',
-    link: '/dessert'
+    link: '/category/dessert'
   },
   {
     name: 'Соусы',
-    link: '/sauce'
+    link: '/category/sauce'
   },
 ]
 
