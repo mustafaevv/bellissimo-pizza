@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { useDispatch } from 'react-redux';
+import { addToCart, removeFromCart } from '../../redux/cart';
 
 const Block = styled.div`
   margin-top: 50px;
@@ -71,17 +73,19 @@ const Button = styled.button`
   }
 `;
 
-const Product = ({data}) => {
-  const [select,setSelect] = useState(false)
-  const handleSelect = () => setSelect((state)=>!state)
+const Product = ({data,select}) => {
+  const dispatch = useDispatch()
+  const handleSelect = () => {
+    dispatch(select ? removeFromCart(data.id) : addToCart(data))
+  }
+
   return (
     <Block>
       <Img src={data.image} alt={data.name} />
       <Name>{data.name}</Name>
       <Desc>{data.description}</Desc>
       <Price>{data.price} сум</Price>
-      <Button
-        onClick={handleSelect} 
+      <Button onClick={handleSelect}
         select={select}
       >
         <FontAwesomeIcon icon={faShoppingCart}/> 

@@ -20,9 +20,9 @@ const App = () => {
           <Nav/>
           <Slider/>
           <Routes>
-            <Route path="/" element={<Home/>}/>
             <Route path="category/:type" element={<Category/>}/>
             <Route path="cart" element={<Cart/>}/>
+            <Route path="*" element={<Home/>}/>
           </Routes>
           <Description/>
         </BrowserRouter>

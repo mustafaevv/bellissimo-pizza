@@ -26,8 +26,8 @@ const NavLink = styled.a`
   padding: 16px 25px;
   transition: 0.3s background, 0.3s color;
   border-radius: 8px;
-  color: ${({location})=> location ? 'rgb(190, 45, 43)':'#fff'};
-  background: ${({location})=> location ? '#fff' : 'none'};
+  color: ${({location})=> !location ? 'rgb(190, 45, 43)':'#fff'};
+  background: ${({location})=> !location ? '#fff' : 'none'};
 
   &:hover{
     background: #fff;
@@ -36,10 +36,8 @@ const NavLink = styled.a`
   }
 `;
 
-
 const Nav = () => {
   const location = useLocation()
-  console.log(location);
   return (
     <Container>
       <NavLinks>
@@ -49,7 +47,7 @@ const Nav = () => {
               <NavLink 
                 as={Link}
                 to={link.link}
-                location={location.pathname === link.link}
+                location={location.pathname !== link.link}
                 >
                   {link.name}
               </NavLink>

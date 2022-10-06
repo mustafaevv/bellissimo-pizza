@@ -16,7 +16,7 @@ const Text = styled.p`
   font-size: 18px;
   flex-wrap: 400;
   line-height: 1;
-  max-width: 80vh;
+  max-width: 100vh;
   
 `;
 

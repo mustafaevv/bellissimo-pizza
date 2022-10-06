@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import slider from './sliderItems';
@@ -21,9 +21,11 @@ const Slider = () => {
     <section>
       <Container>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
           slidesPerView={1}
+          speed={1000}
           navigation
+          autoplay={true}
           loop={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}

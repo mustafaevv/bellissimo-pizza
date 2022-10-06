@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Container from '../../layout/Container'
 import Product from '../../components/Product'
 import links from '../../router'
+import { useSelector } from 'react-redux'
 
 const Card = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ const Category = () => {
   const { pathname } = useLocation();
   const {type} = useParams()
   const [data,setData] = useState(null)
+  const {cart:cartItems} = useSelector((state)=>state)
   const {name: title}  = links.find((item) => item.link === pathname);
   useEffect(()=>{
     const fetchData = async ()=>{
@@ -30,7 +32,7 @@ const Category = () => {
     <Container>
       <h1>{title && title}</h1>
       <Card>
-        {data && data.map(card => <Product key={card.id} data={card}/>)}
+        {data && data.map(card => <Product key={card.id} data={card} select={card.id in cartItems}/>)}
       </Card>
     </Container>
   )
